@@ -4,76 +4,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guardiãs das Águas</title>
+    <title>Guardiãs das Águas | Compila, Por Favor</title>
+    <!-- Fontes modernas -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Principal -->
     <link rel="stylesheet" href="GuardiaWebcss.css">
 </head>
 
 <body>
 
-    <section class="hero">
-
-        <!-- Fundo único -->
-        <div class="background"></div>
-
-        <!-- Efeitos -->
-        <div class="fog"></div>
-        <div class="particles"></div>
-        <div class="light" id="light"></div>
-
-        <!-- Menu -->
+    <!-- Overlay de carregamento e cursor customizado podem ser adicionados externamente -->
+    
+    <header class="glass-header" id="navbar">
+        <div class="logo-box">
+            <span class="logo-text">Guardiãs das Águas</span>
+        </div>
         <nav>
-            <form class="search-box">
-                <input type="search" name="q" placeholder="Search query">
-                <input type="submit" value="Go!">
-            </form>
-
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#team">Nossa Equipe</a></li>
-                <li><a href="#historia">História</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre">Sobre o Jogo</a></li>
+                <li><a href="#mecanicas">Mecânicas</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#midia">Mídia</a></li>
+                <li><a href="#download" class="nav-cta">Acessar / Baixar</a></li>
             </ul>
         </nav>
-
-        <!-- Título -->
-        <div class="hero-content">
-            <h1 class="titulo-aaa">Guardiãs das Águas</h1>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
+    </header>
 
+    <section id="home" class="hero">
+        <div class="background"></div>
+        
+        <!-- Efeitos atmosféricos -->
+        <div class="fog"></div>
+        <div class="particles-container" id="particles"></div>
+        
+        <div class="hero-content fade-element">
+            <p class="studio-badge">Desenvolvido por: <strong>Compila, Por Favor</strong></p>
+            <h1 class="titulo-aaa" data-text="Guardiãs das Águas">Guardiãs das Águas</h1>
+            <p class="hero-tagline">Meninas pelo Saneamento. Purifique as profundezas.</p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn-glow">Jogue Agora</a>
+                <a href="#sobre" class="btn-outline">Descubra Mais</a>
+            </div>
+        </div>
     </section>
 
-    <main>
+    <!-- Sobre o Jogo -->
+    <section id="sobre" class="section dark-section">
+        <div class="container layout-grid reveal">
+            <div class="text-content">
+                <h2 class="section-title">Sobre o Jogo</h2>
+                <div class="title-underline"></div>
+                <p class="highlight-text">
+                    <strong>Guardiãs das Águas</strong> é um jogo roguelike de plataforma ambientado em um sistema de esgoto abandonado e corrompido.
+                </p>
+                <p>
+                    O projeto "Guardiãs das Águas - meninas pelo Saneamento" tem apoio do <strong>CNPq/MCTI/MMulheres (Chamada no 31/2023)</strong>, com vigência até 2028. Nossa missão é incentivar meninas e mulheres a atuarem em pesquisas sobre conservação ambiental e saneamento básico através dos videogames.
+                </p>
+            </div>
+            <div class="game-details glass-card">
+                <ul>
+                    <li><span class="label">Gênero:</span> Roguelike / Plataforma / Educacional</li>
+                    <li><span class="label">Temática:</span> Saneamento, Conservação e Meio Ambiente</li>
+                    <li><span class="label">Plataforma:</span> PC (Windows / Web)</li>
+                    <li><span class="label">Público-Alvo:</span> Ensino básico, superior e público geral</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        <section id="home">
-            <h2>Início do Projeto</h2>
-            <p>
-                Guardiãs das Águas é um jogo roguelike de plataforma ambientado em um esgoto abandonado.
-            </p>
-            <img src="Mapa.png" widh="450px" height="400px"   alt="Fase 1">
-        </section>
+    <!-- Mecânicas -->
+    <section id="mecanicas" class="section darker-section">
+        <div class="container reveal">
+            <div class="text-center">
+                <h2 class="section-title">Mecânicas e Controles</h2>
+                <div class="title-underline center"></div>
+                <p class="subtitle">Sobreviva, purifique e restaure o equilíbrio</p>
+            </div>
 
-        <section id="team">
-            <h2>Nossa Equipe</h2>
-            <p>
-                Projeto desenvolvido por estudantes de Engenharia de Software.
-            </p>
-        </section>
+            <div class="cards-grid">
+                <div class="feature-card">
+                    <div class="card-icon">⌨️</div>
+                    <h3>Movimentação Tática</h3>
+                    <p>Controles fluidos usando <code>W A S D</code> ou setas para correr, saltar e desviar de obstáculos tóxicos nas galerias subterrâneas proceduralmente geradas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">💧</div>
+                    <h3>Purificação D'água</h3>
+                    <p>Colete filtros e elementos químicos. Use o botão de <code>AÇÃO</code> para neutralizar áreas envenenadas e curar a fauna local afetada pela poluição.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Pesquisa e Evolução</h3>
+                    <p>Como uma verdadeira pesquisadora do saneamento, recolha amostras da água corrompida para desbloquear novas habilidades e upgrades permanentes na base.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="historia">
-            <h2>História</h2>
-            <p>
-                Antigas guardiãs protegem os fluxos subterrâneos contra a corrupção das profundezas.
-            </p>
-        </section>
+    <!-- Equipe Compila Por Favor -->
+    <section id="equipe" class="section dark-section">
+        <div class="container reveal">
+            <div class="text-center">
+                <h2 class="section-title">Nossa Equipe</h2>
+                <div class="title-underline center"></div>
+                <p class="subtitle studio-name">O estúdio <strong>Compila, Por Favor</strong> é formado pelas Guardiãs das Águas, alunas dedicadas ao desenvolvimento de software e saneamento.</p>
+            </div>
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <a href="mailto:rafaellealgomes142@gmail.com">rafaellealgomes142@gmail.com</a>
-        </section>
+            <div class="team-grid">
+                <!-- Integrantes da equipe -->
+                <div class="team-member rgb-hover">
+                    <div class="member-avatar"></div>
+                    <h3 class="member-name">Rafael</h3>
+                    <p class="member-role">Dev</p>
+                </div>
+                <div class="team-member rgb-hover">
+                    <div class="member-avatar"></div>
+                    <h3 class="member-name">Lucas</h3>
+                    <p class="member-role">Dev</p>
+                </div>
+                <div class="team-member rgb-hover">
+                    <div class="member-avatar"></div>
+                    <h3 class="member-name">Jhessica</h3>
+                    <p class="member-role">Designer</p>
+                </div>
+                <div class="team-member rgb-hover">
+                    <div class="member-avatar"></div>
+                    <h3 class="member-name">Maicky</h3>
+                    <p class="member-role">Produtor e Áudio</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </main>
+    <!-- Mídia -->
+    <section id="midia" class="section darker-section media-section">
+        <div class="container reveal">
+            <h2 class="section-title text-center">Galeria e Gameplay</h2>
+            <div class="title-underline center"></div>
+            
+            <div class="media-gallery">
+                <!-- Imagens placeholders avançadas -->
+                <div class="media-item img-placeholder" style="--bg: url('Mapa.png')"></div>
+                <div class="media-item img-placeholder" style="--bg: linear-gradient(45deg, #112, #224)"><span>Captura 2</span></div>
+                <div class="media-item img-placeholder" style="--bg: linear-gradient(45deg, #122, #144)"><span>Captura 3</span></div>
+                <div class="media-item img-placeholder" style="--bg: linear-gradient(45deg, #212, #414)"><span>Captura 4</span></div>
+            </div>
+            
+            <div class="video-wrapper">
+                <div class="video-overlay">
+                    <span class="play-btn">▶</span>
+                    <h3>Assista ao Trailer Oficial</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Download -->
+    <section id="download" class="section cta-section">
+        <div class="container text-center reveal">
+            <h2 class="cta-title">Tome as Redéas da Purificação</h2>
+            <p class="cta-desc">Seja uma Guardiã. Baixe o jogo agora, ajude-nos na pesquisa sobre saneamento e mude o mundo.</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn-glow large">Baixar no Windows</a>
+                <a href="#" class="btn-outline large">Jogar via Web</a>
+            </div>
+        </div>
+        <div class="scanlines"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Compila, Por Favor</h3>
+                <p>Desenvolvendo com propósito.</p>
+            </div>
+            <div class="footer-info">
+                <p>Guardiãs das Águas - meninas pelo Saneamento</p>
+                <p>Apoio: CNPq / MCTI / MMulheres</p>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:rafaellealgomes142@gmail.com" class="contact-link">rafaellealgomes142@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024-2028 Compila, Por Favor. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
 
 </body>
+
 </html>
