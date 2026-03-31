@@ -189,6 +189,7 @@ ul {
 .hero-content {
     z-index: 5;
     max-width: 900px;
+    margin-top: 60px; /* Afasta o conteúdo do header */
 }
 
 .studio-badge {
@@ -575,6 +576,12 @@ ul {
     font-size: 1.2rem; color: var(--text-muted); margin-bottom: 40px; max-width: 600px; margin-inline: auto;
 }
 
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 .cta-buttons .btn-glow.large {
     font-size: 1.2rem; padding: 20px 50px; border-radius: 4px; border: 1px solid var(--accent-blue);
 }
@@ -630,5 +637,5 @@ ul {
     .cards-grid, .media-gallery, .team-grid { grid-template-columns: 1fr; }
     .glass-header { padding: 15px 20px; }
     .nav-links { display: none; } /* hamburger logica basica no js */
-    .hero-buttons { flex-direction: column; }
+    .hero-buttons, .cta-buttons { flex-direction: column; gap: 15px; }
 }
